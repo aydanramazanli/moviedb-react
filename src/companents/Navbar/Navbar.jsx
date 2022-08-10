@@ -13,7 +13,8 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo">
-        <img src={logo} alt="logo" />
+        <Link to='/'> <img src={logo} alt="logo" /></Link>
+       
       </div>
 
       <nav className="navbar__navbar">
@@ -25,7 +26,7 @@ export default function Navbar() {
             <Link to="/">Account</Link>
           </li>
           <li className="nav-item">
-            <Link to="/">Wishlist</Link>
+            <Link to="/wishlist">Wishlist</Link>
           </li>
         </ul>
       </nav>

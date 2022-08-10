@@ -1,6 +1,7 @@
 @import '../../style/style';
 .movie{
     .movie-img{
+        cursor: pointer;
         width:100%;
         @include breakpoint-down(small) {
             width:90%;
@@ -16,13 +17,30 @@
             transition: all 0.4s ease;
         }
     }
-    h3{
-        color:$light;
-        font-size:26px;
-        padding:0 5px;
-        &:hover {
-            color:$pink;
-            transition: all 0.4s ease;
+    .movie-footer{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin:10px 0;
+        a{
+            cursor: pointer;
+            color:$light;
+            font-size:20px;
+            padding:0 5px;
+            &:hover {
+                color:$pink;
+                transition: all 0.4s ease;
+            }
+        }
+        i{
+            cursor: pointer;
+            font-size: 18px;
+            color:$light;
+            &:hover{
+                color:$pink;
+                transition: all 0.4s ease;
+            }
         }
     }
+   
 }

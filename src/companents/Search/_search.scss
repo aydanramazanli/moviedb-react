@@ -6,12 +6,11 @@
   margin:  auto;
   align-items: center;
   @include breakpoint-down(small) {
-   
     width: 90%;
   }
   input {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.842);
+    background-color: white;
     border-radius: 2%;
     outline: none;
     font-size: 14px;

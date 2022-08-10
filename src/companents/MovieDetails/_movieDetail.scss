@@ -1,0 +1,62 @@
+@import "../../style/style";
+.movieDetail {
+  background-image: url("../../images/background.jpg");
+  @include wallpaper;
+  height:100vh;
+  width:100%;
+  @include breakpoint-down(small) {
+   padding:0 20px;
+   background: $dark;
+   height:100vh;
+  }
+
+  .details {
+    width: 80%;
+    @include breakpoint-down(small) {
+      width:100%;
+      height:100vh;
+    }
+    padding: 50px 0;
+    margin: auto;
+    display: flex;
+    @include breakpoint-down(small) {
+     flex-direction: column;
+    }
+    justify-content: space-between;
+    align-items: center;
+    .detail-info {
+      border-radius: 3%;
+      padding: 25px;
+      width: 50%;
+      @include breakpoint-down(small) {
+        width: 70%;
+       
+      }
+      h1 {
+        font-size: 36px;
+        color: $light;
+      }
+      p {
+        font-size: 20px;
+        color: $light;
+        margin: 10px 0;
+        @include breakpoint-down(small) {
+          letter-spacing:1px;
+         
+        }
+      }
+      span {
+        color: $light;
+        i {
+          color: yellow;
+        }
+      }
+    }
+    .detail-img img {
+      width: 100%;
+      border-radius: 5%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

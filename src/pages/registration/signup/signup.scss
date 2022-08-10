@@ -1,6 +1,7 @@
 @import "../../../style/style";
 .signup-container {
   @include wallpaper;
+  background-image:url('../../../images/background.jpg');
   height: 100vh;
   @include flex-center;
   flex-direction: column;

@@ -1,0 +1,21 @@
+@import '../../style/style';
+.wishList {
+    background-image: url("../../images/background.jpg");
+    @include wallpaper;
+    height:100vh;
+  
+    .details {
+      width: 80%;
+      padding: 50px 0;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    
+      .detail-img img {
+        width: 100%;
+        border-radius: 5%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
