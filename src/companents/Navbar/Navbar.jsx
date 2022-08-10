@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import logo from '../../images/logo.svg'
 import './_navbar.scss'
-import Search from '../Search'
+import Search from '../Search/Search'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
     
 
       <div className="navbar__auth">
-        <Search />
+    
         <button>
           <Link to="/login"> Login</Link>
         </button>

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./pages/registration/signup/SignUp";
 import Login from "./pages/registration/login/Login";
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import "./style/_style.scss";
 
 function App() {
