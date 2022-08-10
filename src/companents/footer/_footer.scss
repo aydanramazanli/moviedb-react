@@ -1,0 +1,37 @@
+@import '../../style/style';
+.footer {
+  
+    padding:20px 0;
+    width: 100%;
+    background: $darkNavbar;
+    @include breakpoint-down(small) {
+      padding:20px ;
+   
+    }
+    &__container{
+        width:80%;
+        margin:auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            color:$light;
+        }
+        ul{
+            display: flex;
+            li{
+                color:$light;
+                margin:0 10px;
+                &:hover{
+                    color:$pink;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    }
+  
+   
+  
+    
+  }
+  
