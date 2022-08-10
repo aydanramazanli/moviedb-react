@@ -1,0 +1,28 @@
+@import '../../style/style';
+.movie{
+    .movie-img{
+        width:100%;
+        @include breakpoint-down(small) {
+            width:90%;
+          }
+       
+        img{
+            width: 100%;
+            height:100%;
+            object-fit:cover;
+        }
+        &:hover{
+            opacity: 0.7;
+            transition: all 0.4s ease;
+        }
+    }
+    h3{
+        color:$light;
+        font-size:26px;
+        padding:0 5px;
+        &:hover {
+            color:$pink;
+            transition: all 0.4s ease;
+        }
+    }
+}

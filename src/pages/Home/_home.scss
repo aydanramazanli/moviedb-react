@@ -2,7 +2,8 @@
 
 .main{
   @include wallpaper;
-  padding: 10px;
+  padding: 10px 0;
+  @include breakpoint-up(medium){padding:20px 0}
   @include breakpoint-down(small) {
     padding:20px;
   }

@@ -1,6 +1,7 @@
 @import "../../../style/style";
 .signup-container {
   @include wallpaper;
+  height: 100vh;
   @include flex-center;
   flex-direction: column;
   .signup-content {

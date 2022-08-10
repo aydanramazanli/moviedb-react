@@ -4,13 +4,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1.5rem 2rem;
-  position: relative;
-  overflow: hidden;
-  top: 0;
+  padding:20px 0;
+ 
   width: 100%;
-  z-index: 999;
   background: $darkNavbar;
+  @include breakpoint-down(small) {
+    padding:20px ;
+ 
+  }
   &__navbar {
     ul {
       display: flex;
