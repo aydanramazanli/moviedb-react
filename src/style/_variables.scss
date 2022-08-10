@@ -1,12 +1,33 @@
 $pink: #ff55a5;
 $dark: #28282d;
 $light:rgba(255, 255, 255, 0.5);
+$darkNavbar:#2b2b31;
+
+
 @mixin flex-center{
     display: flex;
     align-items: center;
     justify-content:center;
 }
 
+@mixin button{
+    border-radius: 4px;
+    background: $pink;
+    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
+    opacity: 0.85;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    border: none;
+    padding: 15px;
+}
+
+@mixin hoverText{
+    color: $pink;
+    transition: all 0.4s ease;
+}
 // Breakpoints
 @media (min-width: 64em) {
     // styles go here

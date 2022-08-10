@@ -1,0 +1,87 @@
+@import "../../style/style";
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: $darkNavbar;
+  &__navbar {
+    ul {
+      display: flex;
+      .nav-item {
+        margin: 0 10px;
+        a {
+          color: $light;
+          font-size: 15px;
+          letter-spacing: 2px;
+          font-weight: 500;
+          text-transform: uppercase;
+          &:hover {
+            @include hoverText;
+          }
+        }
+      }
+    }
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+  .mobile-navbar {
+    @include breakpoint-up(medium){display: none;}
+    padding: 0 20px;
+    i {
+      color: $light;
+      font-size: 30px;
+    &:active{
+        transform: rotate(-0.25turn);
+        transition: all 0.4s ease;
+    }
+    }
+    @include breakpoint-down(small) {
+      display: block;
+    }
+    @include breakpoint-up(large) {
+      display: none;
+    }
+    .sidebar {
+      background: $darkNavbar;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: fixed;
+      top: 70px;
+      right: 0;
+      bottom: 0;
+      background-color: #2b2b31;
+      z-index: 99;
+      width: 200px;
+      padding: 30px 30px 0;
+      ul > li {
+        margin: 15px 0;
+        a {
+          color: $light;
+          &:hover {
+            @include hoverText;
+          }
+        }
+      }
+    }
+  }
+  &__auth {
+    display: flex;
+    button,
+    button > a {
+      @include button;
+      @include breakpoint-down(small) {
+        display: none;
+      }
+    }
+  }
+}
