@@ -11,7 +11,7 @@ export default function MovieDetail() {
   
 const detail= async()=>{
  const movieDetail= await sdk.getPost(id)
- console.log(movieDetail)
+
  setMovie(movieDetail)
 
 }

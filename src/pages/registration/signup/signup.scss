@@ -20,11 +20,11 @@
       width: 80%;
     }
     @include breakpoint-up(medium) {
-      padding: 60px 20px;
+      padding: 30px 20px;
       width: 50%;
     }
     @include breakpoint-up(large) {
-      padding: 60px 20px;
+      padding: 30px 20px;
       width: 25%;
     }
     h1 {
