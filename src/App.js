@@ -9,9 +9,14 @@ import Footer from "./companents/footer/Footer";
 import "./style/_style.scss";
 
 
+
+
 function App() {
+
+
   return (
     <>
+
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
@@ -20,7 +25,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
       </Routes>
-
       <Footer />
     </>
   );

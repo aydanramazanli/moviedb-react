@@ -2,14 +2,15 @@
 .wishList {
     background-image: url("../../images/background.jpg");
     @include wallpaper;
-    height:100vh;
+
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
   
     .details {
       width: 80%;
       padding: 50px 0;
       margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
     
       .detail-img img {
         width: 100%;

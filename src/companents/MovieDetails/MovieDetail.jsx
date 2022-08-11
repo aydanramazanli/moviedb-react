@@ -1,7 +1,9 @@
 import React from 'react'
 import './_movieDetail.scss'
 
+
 export default function MovieDetail() {
+
   return (
     <div className="movieDetail">
       <div className="details">

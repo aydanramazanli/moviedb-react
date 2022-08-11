@@ -8,8 +8,8 @@ export default function WishList() {
         <div className="detail-img">
           <img src="https://dmitryvolkov.me/demo/flixgo2.0/main/img/covers/cover5.jpg" alt="" />
         </div>
-      
       </div>
+      
     </div>
   )
 }
