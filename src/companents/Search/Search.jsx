@@ -2,18 +2,19 @@
 import './_search.scss'
 
 
-const Search = () => {
+const Search = ({searchMovie, setSearchKey}) => {
+  
    
  
+ 
     return<>
-     <div className="search">
-            <input type="search" className="form-control py-1 px-2  rounded"  placeholder="I'm looking for..." aria-label="Search"
-                aria-describedby="search-addon"  />
-                <button>
+     <form className="search" onSubmit={searchMovie}>
+            <input type="text"   placeholder="I'm looking for..." onChange={(e)=>setSearchKey(e.target.value)}  />
+                <button type='submit'>
                 <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
-   
-    </div>
+               
+    </form>
     </>
 }
 

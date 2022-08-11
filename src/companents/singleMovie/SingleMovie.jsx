@@ -1,16 +1,15 @@
 import React from 'react'
 import './_singleMovie.scss'
 import {Link} from  'react-router-dom'
+import image from '../../images/nomoviepic.jpg'
 
-export default function SingleMovie({title, backdrop_path,vote_average}) {
-  console.log()
-
-  
+export default function SingleMovie({title, backdrop_path,vote_average,original_name, original_title}) {
+  const movieImg= `https://image.tmdb.org/t/p/original/${backdrop_path}` || image
   return (
     <div className="movie">
       <div className="movie-img">
-        <img src={`https://image.tmdb.org/t/p/original/${backdrop_path}`} alt="background" />
-        <h2>{title}</h2>
+        <img src={movieImg} alt="background" />
+        <h2>{title || original_name || original_title}</h2>
         <span>{vote_average}</span>
         </div>
       <div className='movie-footer'>   <Link to ='/detail'>Details</Link>

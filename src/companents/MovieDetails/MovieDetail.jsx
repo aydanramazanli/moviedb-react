@@ -3,6 +3,7 @@ import './_movieDetail.scss'
 
 
 export default function MovieDetail() {
+  
 
   return (
     <div className="movieDetail">

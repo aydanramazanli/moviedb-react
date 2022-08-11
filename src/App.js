@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/wishlist" element={<WishList />} />
-        <Route path="/detail" element={<MovieDetail />} />
+        <Route path="/detail:id" element={<MovieDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
       </Routes>
