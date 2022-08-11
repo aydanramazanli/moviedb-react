@@ -3,10 +3,6 @@ import './_search.scss'
 
 
 const Search = ({searchMovie, setSearchKey}) => {
-  
-   
- 
- 
     return<>
      <form className="search" onSubmit={searchMovie}>
             <input type="text"   placeholder="I'm looking for..." onChange={(e)=>setSearchKey(e.target.value)}  />

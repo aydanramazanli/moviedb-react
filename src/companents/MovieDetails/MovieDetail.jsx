@@ -1,24 +1,41 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import './_movieDetail.scss'
-
+import { useParams } from 'react-router-dom'
+import Sdk from '../api/api'
 
 export default function MovieDetail() {
+ const sdk = new Sdk()
+  const [movie, setMovie] = useState()
+  const { id } = useParams()
+
   
+const detail= async()=>{
+ const movieDetail= await sdk.getPost(id)
+ console.log(movieDetail)
+ setMovie(movieDetail)
+
+}
+
+
+useEffect(()=>{
+  detail()
+},[])
 
   return (
     <div className="movieDetail">
       <div className="details">
         <div className="detail-img">
-          <img src="https://dmitryvolkov.me/demo/flixgo2.0/main/img/covers/cover5.jpg" alt="" />
+         
+          <img src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`} alt="" />
         </div>
         <div className="detail-info">
-          <h1>movie name</h1>
+          <h1>{movie?.title || movie?.original_title }</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Voluptates, nobis? Nam, autem dolorum. Magni consequatur labore rem
-            odit, nisi debitis!
+           {movie?.overview}
           </p>
-          <span><i class="fa-solid fa-star"></i> stars</span>
+          <span>
+            <i className="fa-solid fa-star"></i> {movie?.vote_average}
+          </span>
         </div>
       </div>
     </div>

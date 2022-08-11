@@ -11,6 +11,9 @@
   }
 
   .details {
+    .detail-img{
+      width:30%;
+    }
     width: 80%;
     @include breakpoint-down(small) {
       width:100%;
