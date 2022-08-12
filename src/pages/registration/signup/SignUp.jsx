@@ -1,27 +1,25 @@
-import { useRef} from 'react'
-import './signup.scss'
-import { Link, useNavigate } from 'react-router-dom'
+import { useRef } from 'react';
+import './signup.scss';
+import { Link, useNavigate } from 'react-router-dom';
 
-
-export default function SignUp() {
-  const name = useRef(null)
-  const email = useRef(null)
-  const password = useRef(null)
-  const navigate = useNavigate()
+export default function SignUp () {
+  const name = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
+  const navigate = useNavigate();
 
   const submit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const data = {
       name: name.current.value,
       email: email.current.value,
-      password: password.current.value,
+      password: password.current.value
 
-    }
+    };
 
-   
-    navigate('/login')
-    window.localStorage.setItem('data', JSON.stringify(data))
-  }
+    navigate('/login');
+    window.localStorage.setItem('data', JSON.stringify(data));
+  };
 
   const inputs = [
     {
@@ -29,23 +27,23 @@ export default function SignUp() {
       type: 'text',
       placeholder: 'name',
       className: 'form-input',
-      ref: name,
+      ref: name
     },
     {
       name: 'email',
       type: 'email',
       placeholder: 'email',
       className: 'form-input',
-      ref: email,
+      ref: email
     },
     {
       name: 'password',
       type: 'password',
       placeholder: 'password',
       className: 'form-input',
-      ref: password,
-    },
-  ]
+      ref: password
+    }
+  ];
   return (
     <div className="signup-container">
       <div className="signup-content">
@@ -61,10 +59,10 @@ export default function SignUp() {
               type={input.type}
               placeholder={input.placeholder}
             />
-         
+
            </>
           ))}
-          <button className="form-button"  onClick={submit}>Sign up</button>
+          <button className="form-button" onClick={submit}>Sign up</button>
         </form>
         <h5>
           Already have an account?
@@ -72,5 +70,5 @@ export default function SignUp() {
         </h5>
       </div>
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import "./_footer.scss"
+import React from 'react';
+import './_footer.scss';
 
-export default function Footer() {
+export default function Footer () {
   return (
     <div className="footer">
 <div className="footer__container">
@@ -12,5 +12,5 @@ export default function Footer() {
   </ul>
 </div>
     </div>
-  )
+  );
 }

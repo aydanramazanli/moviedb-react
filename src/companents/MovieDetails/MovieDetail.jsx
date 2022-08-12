@@ -1,31 +1,28 @@
-import { useEffect, useState } from 'react'
-import './_movieDetail.scss'
-import { useParams } from 'react-router-dom'
-import Sdk from '../api/SDK'
+import { useEffect, useState } from 'react';
+import './_movieDetail.scss';
+import { useParams } from 'react-router-dom';
+import Sdk from '../api/SDK';
 
-export default function MovieDetail() {
- const sdk = new Sdk()
-  const [movie, setMovie] = useState()
-  const { id } = useParams()
+export default function MovieDetail () {
+  const sdk = new Sdk();
+  const [movie, setMovie] = useState();
+  const { id } = useParams();
 
-  
-const detail= async()=>{
- const movieDetail= await sdk.getPost(id)
+  const detail = async () => {
+    const movieDetail = await sdk.getPost(id);
 
- setMovie(movieDetail)
+    setMovie(movieDetail);
+  };
 
-}
-
-
-useEffect(()=>{
-  detail()
-},[detail])
+  useEffect(() => {
+    detail();
+  }, [detail]);
 
   return (
     <div className="movieDetail">
       <div className="details">
         <div className="detail-img">
-         
+
           <img src={`https://image.tmdb.org/t/p/original/${movie?.poster_path}`} alt="" />
         </div>
         <div className="detail-info">
@@ -39,5 +36,5 @@ useEffect(()=>{
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -21,6 +21,7 @@ function App () {
         <Route path="/detail/:id" element={<MovieDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="*" exact element={<Home />} />
       </Routes>
       <Footer />
     </>
