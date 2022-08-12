@@ -1,24 +1,23 @@
-import { useRef} from 'react'
-import './signup.scss'
-import { Link, useNavigate } from 'react-router-dom'
+import { useRef } from 'react'
+import '../../pages/registration/signup/signup.scss'
+import { Link } from 'react-router-dom'
 
-
-export default function SignUp() {
+export default function Account() {
   const name = useRef(null)
   const email = useRef(null)
   const password = useRef(null)
-  const navigate = useNavigate()
+
+  const local = JSON.parse(localStorage.getItem('data'))
 
   const submit = (e) => {
-    e.preventDefault()
+   
     const data = {
       name: name.current.value,
       email: email.current.value,
       password: password.current.value,
     }
-   
-    navigate('/login')
     window.localStorage.setItem('data', JSON.stringify(data))
+    alert("data updated")
   }
 
   const inputs = [
@@ -44,30 +43,38 @@ export default function SignUp() {
       ref: password,
     },
   ]
+
   return (
     <div className="signup-container">
       <div className="signup-content">
         <h1>Sign Up</h1>
-        <form >
+        <form>
+          <h2>
+           
+            Last Datas: {local.name}, {local.email}, {local.password}
+          </h2>
+
           {inputs.map((input, i) => (
-             <>
-            <input
-              key={i}
-              name={input.name}
-              className={input.className}
-              ref={input.ref}
-              type={input.type}
-              placeholder={input.placeholder}
-            />
-         
-           </>
+            <>
+              <input
+                key={i}
+                name={input.name}
+                className={input.className}
+                ref={input.ref}
+                type={input.type}
+                placeholder={input.placeholder}
+              />
+             
+            </>
+
           ))}
-          <button className="form-button"  onClick={submit}>Sign up</button>
+           <button className="update" type="submit" onClick={submit}>
+                update
+              </button>
+              <Link to='/login'> <button className="form-button" >Login</button></Link>
+             
         </form>
-        <h5>
-          Already have an account?
-          <Link to="/login"> Sign in !</Link>
-        </h5>
+        
       </div>
     </div>
   )

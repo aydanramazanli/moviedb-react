@@ -1,10 +1,11 @@
 import  {useState, useEffect} from 'react'
 import logo from '../../images/logo.svg'
 import './_navbar.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 export default function Navbar() {
+  const location = useLocation()
   const [isOpen, setIOpen] = useState()
 const [datas, setDatas] = useState()
  const visible=()=>{
@@ -13,7 +14,7 @@ const [datas, setDatas] = useState()
  useEffect(()=>{
   const local = JSON.parse(localStorage.getItem("data"));
   setDatas(local)
- },[datas])
+ },[location.pathname])
 
  const remove = () => {
   if (datas !== null) {
@@ -47,7 +48,7 @@ const [datas, setDatas] = useState()
               <Link to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link to="/">Account</Link>
+              <Link to="/account">Account</Link>
             </li>
             <li className="nav-item">
               <Link to="/wishlist">Wishlist</Link>

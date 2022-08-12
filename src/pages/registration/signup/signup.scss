@@ -1,7 +1,7 @@
 @import "../../../style/style";
 .signup-container {
   @include wallpaper;
-  background-image:url('../../../images/background.jpg');
+  background-image: url("../../../images/background.jpg");
   height: 100vh;
   @include flex-center;
   flex-direction: column;
@@ -39,6 +39,7 @@
     form {
       display: flex;
       flex-direction: column;
+      h2{color:white;}
       .form-input {
         background-color: #2b2b31;
         border: 1px solid transparent;
@@ -49,6 +50,7 @@
         border-radius: 4px;
         padding: 0 20px;
         margin: 10px 0;
+
         @include breakpoint-down(small) {
           font-size: 12px;
           padding: 0 10px;
@@ -69,6 +71,18 @@
         width: 100%;
 
         margin-top: 15px;
+      }
+      .update {
+        background: gray;
+        border: none;
+        outline: none;
+        color: white;
+        width: 30%;
+        padding:10px;
+        &:hover{
+          background:darkgray;
+          transition: all 0.4s ease;
+        }
       }
     }
     h5 {
