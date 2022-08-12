@@ -23,9 +23,13 @@
         justify-content:space-between;
         align-items:center;
         margin:10px 0;
+        @include breakpoint-down(medium) {
+            justify-content:space-evenly;
+          }
         @include breakpoint-down(small) {
             margin:5px;
            }
+         
         h2{
             cursor: pointer;
             color:$light;
@@ -34,6 +38,9 @@
             @include breakpoint-down(small) {
                 font-size: 14px;
                }
+               @include breakpoint-down(medium) {
+                font-size: 12px;
+              }  
             &:hover {
                 color:$pink;
                 transition: all 0.4s ease;

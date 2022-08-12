@@ -4,6 +4,9 @@
     @include wallpaper;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(1,1fr);
+    }
   
     .details {
       width: 80%;
@@ -25,11 +28,20 @@
           color:$light;
           font-size:20px;
           @include breakpoint-down(small) {
-           font-size: 14px;
+           font-size: 16px;
+          }
+          @include breakpoint-down(medium) {
+          
+            font-size: 14px;
           }
         }
         button{
-          @include button
+          @include button;
+          @include breakpoint-down(small) {
+            padding:5px;
+            font-size: 14px;
+          }
+         
         }
       }
     }

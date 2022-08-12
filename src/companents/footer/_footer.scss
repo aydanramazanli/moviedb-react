@@ -2,11 +2,11 @@
 .footer {
   
     padding:20px 0;
-    width: 100%;
+   
     background: $darkNavbar;
     @include breakpoint-down(small) {
       padding:20px ;
-   
+      
     }
     &__container{
         width:80%;

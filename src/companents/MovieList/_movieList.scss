@@ -5,22 +5,25 @@
   margin: 50px auto;
   width: 80%;
   @include breakpoint-down(small) {
-    width:90%;
+    width: 90%;
   }
+
   h1 {
     font-size: 36px;
     line-height: 50px;
     color: $light;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
   .list {
-    display:grid;
-    width:100%;
+    display: grid;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     @include breakpoint-down(small) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-   
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

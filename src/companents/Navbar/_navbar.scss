@@ -4,13 +4,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:20px 0;
- 
-  width: 100%;
+  padding: 20px 0;
+
   background: $darkNavbar;
   @include breakpoint-down(small) {
-    padding:20px ;
- 
+    padding: 20px;
+
   }
   &__navbar {
     ul {
@@ -34,15 +33,17 @@
     }
   }
   .mobile-navbar {
-    @include breakpoint-up(medium){display: none;}
+    @include breakpoint-down(medium) {
+      display: none;
+    }
     padding: 0 20px;
     i {
       color: $light;
       font-size: 30px;
-    &:active{
+      &:active {
         transform: rotate(-0.25turn);
         transition: all 0.4s ease;
-    }
+      }
     }
     @include breakpoint-down(small) {
       display: block;

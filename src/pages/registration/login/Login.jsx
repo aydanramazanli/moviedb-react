@@ -18,7 +18,7 @@ export default function Login() {
       ) {
         navigate('/')
       } else {
-        alert('invalid data')
+        alert('incorrect name or password')
       }
     }
     else{
@@ -43,6 +43,7 @@ export default function Login() {
     },
   ]
   return (
+  
     <div className="signup-container">
       <div className="signup-content">
         <h1>Sign In</h1>
