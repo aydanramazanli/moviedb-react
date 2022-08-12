@@ -17,11 +17,12 @@ export default function SingleMovie({
     <div className="movie">
       <div className="movie-img">
         <img src={movieImg} alt="background" />
-        <h2>{title || original_name || original_title}</h2>
-        <span>{vote_average}</span>
+      
+       
       </div>
       <div className="movie-footer">
-       <Link to={`/detail/${id}`}>Details</Link>
+      <h2>{title || original_name || original_title}</h2>
+       {/* <Link to={`/detail/${id}`}>Details</Link> */}
         <i className="fa-solid fa-heart-circle-plus"></i>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import {useRef} from 'react'
+import { useRef } from 'react'
 import '../signup/signup.scss'
 import { useNavigate, Link } from 'react-router-dom'
 
@@ -6,21 +6,26 @@ export default function Login() {
   const name = useRef(null)
   const password = useRef(null)
   const navigate = useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    var x = localStorage.getItem("data");
-   if(x){
-    var data = JSON.parse(x);
-    if(data.name===name.current.value && data.password===password.current.value){
-      navigate('/')
+    var data = localStorage.getItem('data')
+    if (data) {
+      var datas = JSON.parse(data)
+      if (
+        datas.name === name.current.value &&
+        datas.password === password.current.value
+      ) {
+        navigate('/')
+      } else {
+        alert('invalid data')
+      }
     }
-else{
-  alert('invalid data')
-}
-   }
-
+    else{
+      alert('please register')
+    }
   }
- 
+
   const inputs = [
     {
       name: 'name',
@@ -42,7 +47,7 @@ else{
       <div className="signup-content">
         <h1>Sign In</h1>
         <form action="">
-        {inputs.map((input, i) => (
+          {inputs.map((input, i) => (
             <input
               key={i}
               name={input.name}
