@@ -2,12 +2,17 @@
 .wishList {
     background-image: url("../../images/background.jpg");
     @include wallpaper;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     @include breakpoint-down(small) {
       grid-template-columns: repeat(1,1fr);
     }
-  
+  h1{
+    color:white;
+    text-align: center;
+    
+  }
     .details {
       width: 80%;
       padding: 50px 0;
