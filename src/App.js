@@ -1,20 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import SignUp from "./pages/registration/signup/SignUp";
-import Login from "./pages/registration/login/Login";
-import Home from "./pages/Home/Home";
-import Navbar from "./companents/Navbar/Navbar";
-import WishList from "./companents/WishList/WishList"
-import MovieDetail from "./companents/MovieDetails/MovieDetail";
-import Footer from "./companents/footer/Footer";
-import "./style/_style.scss";
-import Account from "./companents/account/Account";
+import { Routes, Route } from 'react-router-dom';
+import SignUp from './pages/registration/signup/SignUp';
+import Login from './pages/registration/login/Login';
+import Home from './pages/Home/Home';
+import Navbar from './companents/Navbar/Navbar';
+import WishList from './companents/WishList/WishList';
+import MovieDetail from './companents/MovieDetails/MovieDetail';
+import Footer from './companents/footer/Footer';
+import './style/_style.scss';
+import Account from './companents/account/Account';
 
-
-
-
-function App() {
-
-
+function App () {
   return (
     <>
 

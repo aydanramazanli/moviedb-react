@@ -1,30 +1,29 @@
-import { useRef } from 'react'
-import '../signup/signup.scss'
-import { useNavigate, Link } from 'react-router-dom'
+import { useRef } from 'react';
+import '../signup/signup.scss';
+import { useNavigate, Link } from 'react-router-dom';
 
-export default function Login() {
-  const name = useRef(null)
-  const password = useRef(null)
-  const navigate = useNavigate()
+export default function Login () {
+  const name = useRef(null);
+  const password = useRef(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    var data = localStorage.getItem('data')
+    e.preventDefault();
+    const data = localStorage.getItem('data');
     if (data) {
-      var datas = JSON.parse(data)
+      const datas = JSON.parse(data);
       if (
         datas.name === name.current.value &&
         datas.password === password.current.value
       ) {
-        navigate('/')
+        navigate('/');
       } else {
-        alert('incorrect name or password')
+        alert('incorrect name or password');
       }
+    } else {
+      alert('please register');
     }
-    else{
-      alert('please register')
-    }
-  }
+  };
 
   const inputs = [
     {
@@ -32,18 +31,18 @@ export default function Login() {
       type: 'text',
       placeholder: 'name',
       className: 'form-input',
-      ref: name,
+      ref: name
     },
     {
       name: 'password',
       type: 'password',
       placeholder: 'password',
       className: 'form-input',
-      ref: password,
-    },
-  ]
+      ref: password
+    }
+  ];
   return (
-  
+
     <div className="signup-container">
       <div className="signup-content">
         <h1>Sign In</h1>
@@ -63,11 +62,9 @@ export default function Login() {
             Sign in
           </button>
         </form>
-        <h5>
-          Don't have an account?
-          <Link to="/register">Sign Up</Link>
+        <h5>Dont have an account? <Link to="/register">Sign Up</Link>
         </h5>
       </div>
     </div>
-  )
+  );
 }

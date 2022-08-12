@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react'
-import logo from '../../images/logo.svg'
-import './_navbar.scss'
-import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+import logo from '../../images/logo.svg';
+import './_navbar.scss';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Navbar() {
-  const location = useLocation()
-  const [isOpen, setIOpen] = useState()
-  const [datas, setDatas] = useState()
+export default function Navbar () {
+  const location = useLocation();
+  const [isOpen, setIOpen] = useState();
+  const [datas, setDatas] = useState();
   const visible = () => {
-    setIOpen(!isOpen)
-  }
+    setIOpen(!isOpen);
+  };
   useEffect(() => {
-    const local = JSON.parse(localStorage.getItem('data'))
-    setDatas(local)
-  }, [location.pathname])
+    const local = JSON.parse(localStorage.getItem('data'));
+    setDatas(local);
+  }, [location.pathname]);
 
   const remove = () => {
     if (datas !== null) {
-      window.localStorage.removeItem('data')
+      window.localStorage.removeItem('data');
     }
-  }
+  };
 
   return (
     <div className="navbar">
@@ -29,7 +29,8 @@ export default function Navbar() {
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      {datas === null ? (
+      {datas === null
+        ? (
         <>
           <nav className="navbar__navbar">
             <ul>
@@ -44,7 +45,8 @@ export default function Navbar() {
             </button>
           </div>
         </>
-      ) : (
+          )
+        : (
         <>
           <nav className="navbar__navbar">
             <ul>
@@ -65,14 +67,16 @@ export default function Navbar() {
             </button>
           </div>
         </>
-      )}
+          )}
 
       <div className="mobile-navbar">
         <i className="fa-solid fa-bars" onClick={visible}></i>
-        {isOpen ? (
+        {isOpen
+          ? (
           <nav className="sidebar">
             <ul>
-              {datas === null ? (
+              {datas === null
+                ? (
                 <>
                   <li className="nav-item">
                     <Link to="/">Home</Link>
@@ -81,7 +85,8 @@ export default function Navbar() {
                     <Link to="/">Login</Link>
                   </li>
                 </>
-              ) : (
+                  )
+                : (
                 <>
                   <li className="nav-item">
                     <Link to="/">Home</Link>
@@ -95,13 +100,14 @@ export default function Navbar() {
                   <li className="nav-item">
                     <Link to="/login">Logout</Link>
                   </li>
-                 
+
                 </>
-              )}
+                  )}
             </ul>
           </nav>
-        ) : null}
+            )
+          : null}
       </div>
     </div>
-  )
+  );
 }
