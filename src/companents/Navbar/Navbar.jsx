@@ -97,7 +97,7 @@ export default function Navbar () {
                   <li className="nav-item">
                     <Link to="/wishlist">Wishlist</Link>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item"onClick={remove}>
                     <Link to="/login">Logout</Link>
                   </li>
 
