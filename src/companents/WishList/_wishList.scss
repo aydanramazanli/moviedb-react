@@ -2,8 +2,6 @@
 .wishList {
     background-image: url("../../images/background.jpg");
     @include wallpaper;
-
-
     display: grid;
     grid-template-columns: repeat(4,1fr);
   
@@ -17,6 +15,22 @@
         border-radius: 5%;
         height: 100%;
         object-fit: cover;
+      }
+      .footer{
+        padding:10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+          color:$light;
+          font-size:20px;
+          @include breakpoint-down(small) {
+           font-size: 14px;
+          }
+        }
+        button{
+          @include button
+        }
       }
     }
   }

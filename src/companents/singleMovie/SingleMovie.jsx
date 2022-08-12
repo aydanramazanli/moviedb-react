@@ -1,29 +1,27 @@
-import React from 'react'
+import {useContext} from 'react'
+import {GlobalContext} from '../context/GlobalState'
 import './_singleMovie.scss'
-import { Link } from 'react-router-dom'
-import image from '../../images/nomoviepic.jpg'
 
-export default function SingleMovie({
-  id,
-  title,
-  backdrop_path,
-  vote_average,
-  original_name,
-  original_title,
-}) {
-  const movieImg =
-    `https://image.tmdb.org/t/p/original/${backdrop_path}` || image
+import {Link} from 'react-router-dom'
+
+export default function SingleMovie({movie}) {
+ const {addMovieList, wishList} = useContext(GlobalContext)
+  const wishMovie =wishList.find(i=>i.id===movie.id)
+
+ // const wishHeart =wishMovie ? true:false
   return (
     <div className="movie">
+      <Link to={`/detail/${movie.id}`}>
       <div className="movie-img">
-        <img src={movieImg} alt="background" />
-      
-       
+        <img src={  `https://image.tmdb.org/t/p/original/${movie.backdrop_path || movie.poster_path}`} alt="background" />
       </div>
+      </Link>
       <div className="movie-footer">
-      <h2>{title || original_name || original_title}</h2>
-       {/* <Link to={`/detail/${id}`}>Details</Link> */}
-        <i className="fa-solid fa-heart-circle-plus"></i>
+        <h2>{movie.title || movie.original_name || movie.original_title}</h2>
+        <i className="fa-solid fa-heart-circle-plus" onClick={() =>addMovieList(movie)} style={ wishMovie?{ color:"#ff55a5"} : null}></i>
+    
+      
+     
       </div>
     </div>
   )

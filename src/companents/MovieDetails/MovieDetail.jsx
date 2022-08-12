@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './_movieDetail.scss'
 import { useParams } from 'react-router-dom'
-import Sdk from '../api/api'
+import Sdk from '../api/SDK'
 
 export default function MovieDetail() {
  const sdk = new Sdk()
@@ -19,7 +19,7 @@ const detail= async()=>{
 
 useEffect(()=>{
   detail()
-},[])
+},[detail])
 
   return (
     <div className="movieDetail">

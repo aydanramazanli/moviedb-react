@@ -15,7 +15,9 @@ export default function SignUp() {
       name: name.current.value,
       email: email.current.value,
       password: password.current.value,
+
     }
+
    
     navigate('/login')
     window.localStorage.setItem('data', JSON.stringify(data))

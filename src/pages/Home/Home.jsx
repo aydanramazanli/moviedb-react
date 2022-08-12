@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import MovieList from '../../companents/MovieList/MovieList'
 import Search from '../../companents/Search/Search'
 import './_home.scss'
-import Sdk from '../../companents/api/api'
+import Sdk from '../../companents/api/SDK'
 
 export default function Home() {
   const [searchKey, setSearchKey] = useState()

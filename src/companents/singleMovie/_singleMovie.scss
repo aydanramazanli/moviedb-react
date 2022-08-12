@@ -2,7 +2,8 @@
 .movie{
     .movie-img{
         cursor: pointer;
-        width:100%;
+        width:250px;
+        height:150px;
         @include breakpoint-down(small) {
             width:90%;
           }
@@ -22,11 +23,17 @@
         justify-content:space-between;
         align-items:center;
         margin:10px 0;
+        @include breakpoint-down(small) {
+            margin:5px;
+           }
         h2{
             cursor: pointer;
             color:$light;
             font-size:20px;
             padding:0 5px;
+            @include breakpoint-down(small) {
+                font-size: 14px;
+               }
             &:hover {
                 color:$pink;
                 transition: all 0.4s ease;
