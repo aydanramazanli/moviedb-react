@@ -1,5 +1,5 @@
 import './_movieList.scss';
-import SingleMovie from '../singleMovie/SingleMovie';
+import SingleMovie from '../SingleMovie/SingleMovie';
 
 export default function MovieList ({ datas }) {
   return (

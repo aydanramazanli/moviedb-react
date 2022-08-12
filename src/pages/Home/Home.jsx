@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import MovieList from '../../companents/MovieList/MovieList';
-import Search from '../../companents/Search/Search';
+import MovieList from '../../components/MovieList/MovieList';
+import Search from '../../components/Search/Search';
 import './_home.scss';
-import Sdk from '../../companents/api/SDK';
+import Sdk from '../../service/api/SDK';
 
 export default function Home () {
   const [searchKey, setSearchKey] = useState();

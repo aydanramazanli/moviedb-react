@@ -23,7 +23,9 @@
         "quotes": [2, "single", {"allowTemplateLiterals": true}],
         "react/react-in-jsx-scope": "off",  
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "indent": [1, "tab"],
+"        no-tabs": ["error", { "allowIndentationTabs": true }]
     }
 
 }

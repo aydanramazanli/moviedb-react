@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../../service/context/GlobalState';
 import './_wishList.scss';
 
 export default function WishList () {

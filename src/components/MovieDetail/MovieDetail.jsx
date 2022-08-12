@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './_movieDetail.scss';
 import { useParams } from 'react-router-dom';
-import Sdk from '../api/SDK';
+import Sdk from '../../service/api/SDK';
 
 export default function MovieDetail () {
   const sdk = new Sdk();

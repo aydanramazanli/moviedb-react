@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import '../signup/signup.scss';
+import '../SignUp/signup.scss';
 import { useNavigate, Link } from 'react-router-dom';
 
 export default function Login () {

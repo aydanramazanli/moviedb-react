@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import logo from '../../images/logo.svg';
 import './_navbar.scss';
 import { Link, useLocation } from 'react-router-dom';
@@ -6,20 +6,23 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar () {
   const location = useLocation();
   const [isOpen, setIOpen] = useState();
-  const [datas, setDatas] = useState();
+  const [userData, setUserData] = useState();
   const visible = () => {
     setIOpen(!isOpen);
   };
   useEffect(() => {
     const local = JSON.parse(localStorage.getItem('data'));
-    setDatas(local);
+    setUserData(local);
   }, [location.pathname]);
 
-  const remove = () => {
-    if (datas !== null) {
-      window.localStorage.removeItem('data');
-    }
-  };
+  const remove = useCallback(
+    () => {
+      if (userData !== null) {
+        window.localStorage.removeItem('data');
+      }
+    },
+    [userData]
+  );
 
   return (
     <div className="navbar">
@@ -29,7 +32,7 @@ export default function Navbar () {
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      {datas === null
+      {userData === null
         ? (
         <>
           <nav className="navbar__navbar">
@@ -75,7 +78,7 @@ export default function Navbar () {
           ? (
           <nav className="sidebar">
             <ul>
-              {datas === null
+              { userData === null
                 ? (
                 <>
                   <li className="nav-item">

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import { GlobalContext } from '../../service/context/GlobalState';
 import './_singleMovie.scss';
 
 import { Link } from 'react-router-dom';
