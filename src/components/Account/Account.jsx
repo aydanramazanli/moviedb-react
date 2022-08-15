@@ -3,47 +3,47 @@ import '../../pages/registration/SignUp/signup.scss';
 import { Link } from 'react-router-dom';
 
 export default function Account () {
-	const name = useRef(null);
-	const email = useRef(null);
-	const password = useRef(null);
+  const name = useRef(null);
+  const email = useRef(null);
+  const password = useRef(null);
 
-	const local = JSON.parse(localStorage.getItem('data'));
+  const local = JSON.parse(localStorage.getItem('data'));
 
-	const submit = (e) => {
-		const data = {
-			name: name.current.value,
-			email: email.current.value,
-			password: password.current.value
-		};
-		window.localStorage.setItem('data', JSON.stringify(data));
-		alert('data updated');
-	};
+  const submit = (e) => {
+    const data = {
+      name: name.current.value,
+      email: email.current.value,
+      password: password.current.value
+    };
+    window.localStorage.setItem('data', JSON.stringify(data));
+    alert('data updated');
+  };
 
-	const inputs = [
-		{
-			name: 'name',
-			type: 'text',
-			placeholder: 'name',
-			className: 'form-input',
-			ref: name
-		},
-		{
-			name: 'email',
-			type: 'email',
-			placeholder: 'email',
-			className: 'form-input',
-			ref: email
-		},
-		{
-			name: 'password',
-			type: 'password',
-			placeholder: 'password',
-			className: 'form-input',
-			ref: password
-		}
-	];
+  const inputs = [
+    {
+      name: 'name',
+      type: 'text',
+      placeholder: 'name',
+      className: 'form-input',
+      ref: name
+    },
+    {
+      name: 'email',
+      type: 'email',
+      placeholder: 'email',
+      className: 'form-input',
+      ref: email
+    },
+    {
+      name: 'password',
+      type: 'password',
+      placeholder: 'password',
+      className: 'form-input',
+      ref: password
+    }
+  ];
 
-	return (
+  return (
 		<div className="signup-container">
 			<div className="signup-content">
 				<h1>Sign Up</h1>
@@ -76,5 +76,5 @@ export default function Account () {
 
 			</div>
 		</div>
-	);
+  );
 }

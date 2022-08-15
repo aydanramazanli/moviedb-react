@@ -10,22 +10,21 @@ import './style/_style.scss';
 import Account from './components/Account/Account';
 
 function App () {
-	return (
-		<>
-
-			<Navbar />
-			<Routes>
-				<Route path="/" exact element={<Home />} />
-				<Route path="/wishlist" element={<WishList />} />
-				<Route path="/account" element={<Account />} />
-				<Route path="/detail/:id" element={<MovieDetail />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/register" element={<SignUp />} />
-				<Route path="*" exact element={<Home />} />
-			</Routes>
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/detail/:id" element={<MovieDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="*" exact element={<Home />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
 
 export default App;

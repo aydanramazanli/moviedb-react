@@ -8,7 +8,6 @@ export default function SingleMovie ({ movie }) {
   const { addMovieList, wishList } = useContext(GlobalContext);
   const wishMovie = wishList.find(i => i.id === movie.id);
 
-  // const wishHeart =wishMovie ? true:false
   return (
     <div className="movie">
       <Link to={`/detail/${movie.id}`}>

@@ -15,14 +15,11 @@ export default function Navbar () {
     setUserData(local);
   }, [location.pathname]);
 
-  const remove = useCallback(
-    () => {
-      if (userData !== null) {
-        window.localStorage.removeItem('data');
-      }
-    },
-    [userData]
-  );
+  const remove = useCallback(() => {
+    if (userData !== null) {
+      window.localStorage.removeItem('data');
+    }
+  }, [userData]);
 
   return (
     <div className="navbar">
@@ -78,7 +75,7 @@ export default function Navbar () {
           ? (
           <nav className="sidebar">
             <ul>
-              { userData === null
+              {userData === null
                 ? (
                 <>
                   <li className="nav-item">
@@ -100,10 +97,9 @@ export default function Navbar () {
                   <li className="nav-item">
                     <Link to="/wishlist">Wishlist</Link>
                   </li>
-                  <li className="nav-item"onClick={remove}>
+                  <li className="nav-item" onClick={remove}>
                     <Link to="/login">Logout</Link>
                   </li>
-
                 </>
                   )}
             </ul>
