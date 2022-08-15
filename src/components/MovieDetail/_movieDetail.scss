@@ -2,27 +2,29 @@
 .movieDetail {
   background-image: url("../../images/background.jpg");
   @include wallpaper;
-  height: $full-vh;
-  width:$full;
+  @include breakpoint-up(medium) {
+    height: $full-vh;
+    width: $full;
+  }
   @include breakpoint-down(small) {
     padding: 0 $medium;
     background: $dark;
-    height: $full-vh;
   }
-
   .details {
-    .detail-img {
+    width: 80%;
+    .details span {
       width: 30%;
     }
-    width: 80%;
     @include breakpoint-down(small) {
       width: $full;
-      height: $full-vh;
     }
     padding: calc($full-px/2) 0;
     margin: $auto;
     display: $flex;
     @include breakpoint-down(small) {
+      flex-direction: $col;
+    }
+    @include breakpoint-down(medium) {
       flex-direction: $col;
     }
     @include flex-between;
@@ -32,6 +34,9 @@
       width: $half;
       @include breakpoint-down(small) {
         width: 70%;
+      }
+      @include breakpoint-down(medium) {
+        width: $full;
       }
       h1 {
         font-size: $large;

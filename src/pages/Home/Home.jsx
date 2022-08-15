@@ -6,12 +6,12 @@ import Sdk from '../../service/api/SDK';
 
 export default function Home () {
   const [searchKey, setSearchKey] = useState();
-  const [datas, setDatas] = useState([]);
+  const [movieData, setMovieData] = useState([]);
   const sdk = new Sdk();
 
   const data = async () => {
     const res = await sdk.getData(searchKey);
-    setDatas(res);
+    setMovieData(res);
   };
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function Home () {
     <>
       <div className="main">
         <Search searchMovie={searchMovie} setSearchKey={setSearchKey} />
-        <MovieList datas={datas} />
+        <MovieList movieData={movieData} />
       </div>
     </>
   );

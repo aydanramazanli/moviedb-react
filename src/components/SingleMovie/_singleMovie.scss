@@ -2,15 +2,12 @@
 .movie {
   .movie-img {
     cursor: $pointer;
-    width: calc(($full-px *2) + ($full-px/2));
+    width: calc(($full-px * 2) + ($full-px/2));
     height: calc($full-px + ($full-px/2));
     @include breakpoint-down(small) {
       width: 90%;
     }
 
-    img {
-      @include image;
-    }
     &:hover {
       opacity: 0.7;
       transition: all 0.4s ease;
