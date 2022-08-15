@@ -10,7 +10,6 @@ export default function MovieList ({ movieData }) {
            movieData.map((movie) => {
              return <SingleMovie key={movie.id} movie={movie} />;
            })}
-        ;
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ export default function WishList () {
   const { wishList, removeMovielist } = useContext(GlobalContext);
   return (
 
-    <div className="wishList">
+    <div className="wishList" >
       {wishList.length > 0
         ? (
             wishList.map((item) => {
