@@ -6,6 +6,7 @@ import './_wishList.scss';
 export default function WishList () {
   const { wishList, removeMovielist } = useContext(GlobalContext);
   return (
+
     <div className="wishList">
       {wishList.length > 0
         ? (
@@ -29,8 +30,12 @@ export default function WishList () {
             })
           )
         : (
-        <h1>No Movies Yet</h1>
+          <div style={{ height: '100vh' }}>
+               <h1>No Movies Yet</h1>
+          </div>
+
           )}
     </div>
+
   );
 }

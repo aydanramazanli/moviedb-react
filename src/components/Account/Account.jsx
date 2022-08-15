@@ -13,7 +13,8 @@ export default function Account () {
     const data = {
       name: name.current.value,
       email: email.current.value,
-      password: password.current.value
+      password: password.current.value,
+      wishList: []
     };
     window.localStorage.setItem('data', JSON.stringify(data));
     alert('data updated');

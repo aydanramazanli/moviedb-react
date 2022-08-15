@@ -1,8 +1,9 @@
 import { createContext, useReducer, useEffect } from 'react';
 import AppReducer from '../reducer/AppReducer';
+
 // initialState
 const initialState = {
-  wishList: localStorage.getItem('wishList')
+  wishList: localStorage.getItem('data').wishList
     ? JSON.parse(localStorage.getItem('wishList'))
     : []
 };
@@ -14,7 +15,7 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
   useEffect(() => {
-    localStorage.setItem('wishList', JSON.stringify(state.wishList));
+    localStorage.setItem('wishlist', JSON.stringify(state.wishList));
   });
 
   // actions

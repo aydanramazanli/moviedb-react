@@ -14,8 +14,8 @@ export default function SignUp () {
     const data = {
       name: name.current.value,
       email: email.current.value,
-      password: password.current.value
-      // wishList: []
+      password: password.current.value,
+      wishList: []
     };
 
     navigate('/login');
