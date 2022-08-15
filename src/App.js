@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import './style/_style.scss';
 import SignUp from './pages/registration/SignUp/SignUp';
 import Login from './pages/registration/Login/Login';
 import Home from './pages/Home/Home';
@@ -6,7 +7,6 @@ import Navbar from './components/Navbar/Navbar';
 import WishList from './components/WishList/WishList';
 import MovieDetail from './components/MovieDetail/MovieDetail';
 import Footer from './components/Footer/Footer';
-import './style/_style.scss';
 import Account from './components/Account/Account';
 
 function App () {
