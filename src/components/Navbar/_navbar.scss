@@ -1,26 +1,23 @@
 @import "../../style/style";
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 0;
+  @include flex-around;
+  padding: $medium 0;
 
   background: $darkNavbar;
   @include breakpoint-down(small) {
-    padding: 20px;
-
+    padding: $medium;
   }
   &__navbar {
     ul {
-      display: flex;
+      display: $flex;
       .nav-item {
-        margin: 0 10px;
+        margin: 0 $sm;
         a {
           color: $light;
-          font-size: 15px;
+          font-size: $ssm;
           letter-spacing: 2px;
-          font-weight: 500;
+          font-weight: $bold;
           text-transform: uppercase;
           &:hover {
             @include hoverText;
@@ -29,44 +26,43 @@
       }
     }
     @include breakpoint-down(small) {
-      display: none;
+      display: $none;
     }
   }
   .mobile-navbar {
     @include breakpoint-down(medium) {
-      display: none;
+      display: $none;
     }
-    padding: 0 20px;
+    padding: 0 $medium;
     i {
       color: $light;
-      font-size: 30px;
+      font-size: $llarge;
       &:active {
         transform: rotate(-0.25turn);
         transition: all 0.4s ease;
       }
     }
     @include breakpoint-down(small) {
-      display: block;
+      display: $block;
     }
     @include breakpoint-up(large) {
-      display: none;
+      display: $none;
     }
     .sidebar {
       background: $darkNavbar;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      @include flex-col;
+      justify-content: $start;
+      align-items: $start;
       position: fixed;
       top: 70px;
       right: 0;
       bottom: 0;
-      background-color: #2b2b31;
+      background-color: $bar;
       z-index: 99;
-      width: 200px;
+      width: calc($full-px *2);
       padding: 30px 30px 0;
       ul > li {
-        margin: 15px 0;
+        margin: $ssm 0;
         a {
           color: $light;
           &:hover {
@@ -77,12 +73,12 @@
     }
   }
   &__auth {
-    display: flex;
+    display: $flex;
     button,
     button > a {
       @include button;
       @include breakpoint-down(small) {
-        display: none;
+        display: $none;
       }
     }
   }

@@ -26,8 +26,10 @@ export const GlobalProvider = (props) => {
     dispatch({ type: 'REMOVE_MOVIE', payload: id });
   };
   return (
-		<GlobalContext.Provider value={{ wishList: state.wishList, addMovieList, removeMovielist }}>
-			{props.children}
-		</GlobalContext.Provider>
+    <GlobalContext.Provider
+      value={{ wishList: state.wishList, addMovieList, removeMovielist }}
+    >
+      {props.children}
+    </GlobalContext.Provider>
   );
 };

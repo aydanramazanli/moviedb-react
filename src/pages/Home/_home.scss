@@ -3,9 +3,9 @@
 .main{
   @include wallpaper;
   background-image:url('../../images/background.jpg');
-  padding: 10px 0;
-  @include breakpoint-up(medium){padding:20px 0}
+  padding: calc($medium/2) 0;
+  @include breakpoint-up(medium){padding:$medium 0}
   @include breakpoint-down(small) {
-    padding:20px;
+    padding:$medium;
   }
 }

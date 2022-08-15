@@ -2,34 +2,34 @@
 
 .search {
   width: 80%;
-  display: flex;
-  margin:  auto;
-  align-items: center;
+  display: $flex;
+  margin: $auto;
+  align-items: $center;
   @include breakpoint-down(small) {
     width: 90%;
   }
   input {
-    width: 100%;
-    background-color: white;
+    width: $full;
+    background-color: $white;
     border-radius: 2%;
-    outline: none;
-    font-size: 14px;
-    border: none;
-    padding: 15px 20px;
+    outline: $none;
+    font-size: $ssm;
+    border: $none;
+    padding: $ssm $medium;
     color: $dark;
     @include breakpoint-down(small) {
-        padding: 10px 20px;
-      }
+      padding: $sm $medium;
+    }
   }
-  button{
-    background-color:transparent;
-    border:none;outline:none;
-    cursor: pointer;
+  button {
+    background-color: transparent;
+    border: $none;
+    outline: $none;
+    cursor: $pointer;
     i {
-        color: $light;
-        font-size: 20px;
-        margin: 0 10px;
-      }
+      color: $light;
+      font-size: $medium;
+      margin: 0 $sm;
+    }
   }
-
 }

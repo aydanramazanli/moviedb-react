@@ -1,60 +1,53 @@
-@import '../../style/style';
-.movie{
-    .movie-img{
-        cursor: pointer;
-        width:250px;
-        height:150px;
-        @include breakpoint-down(small) {
-            width:90%;
-          }
-       
-        img{
-            width: 100%;
-            height:100%;
-            object-fit:cover;
-        }
-        &:hover{
-            opacity: 0.7;
-            transition: all 0.4s ease;
-        }
+@import "../../style/style";
+.movie {
+  .movie-img {
+    cursor: $pointer;
+    width: calc(($full-px *2) + ($full-px/2));
+    height: calc($full-px + ($full-px/2));
+    @include breakpoint-down(small) {
+      width: 90%;
     }
-    .movie-footer{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        margin:10px 0;
-        @include breakpoint-down(medium) {
-            justify-content:space-evenly;
-          }
-        @include breakpoint-down(small) {
-            margin:5px;
-           }
-         
-        h2{
-            cursor: pointer;
-            color:$light;
-            font-size:20px;
-            padding:0 5px;
-            @include breakpoint-down(small) {
-                font-size: 14px;
-               }
-               @include breakpoint-down(medium) {
-                font-size: 12px;
-              }  
-            &:hover {
-                color:$pink;
-                transition: all 0.4s ease;
-            }
-        }
-        i{
-            cursor: pointer;
-            font-size: 18px;
-            color:$light;
-            &:hover{
-                color:$pink;
-                transition: all 0.4s ease;
-            }
-        }
+
+    img {
+      @include image;
     }
-   
+    &:hover {
+      opacity: 0.7;
+      transition: all 0.4s ease;
+    }
+  }
+  .movie-footer {
+    @include flex-between;
+    margin: $sm 0;
+    @include breakpoint-down(medium) {
+      justify-content: $evenly;
+    }
+    @include breakpoint-down(small) {
+      margin: calc($sm/2);
+    }
+
+    h2 {
+      cursor: $pointer;
+      color: $light;
+      font-size: $medium;
+      padding: 0 calc($sm/2);
+      @include breakpoint-down(small) {
+        font-size: $ssm;
+      }
+      @include breakpoint-down(medium) {
+        font-size: $sm;
+      }
+      &:hover {
+        @include transition;
+      }
+    }
+    i {
+      cursor: $pointer;
+      font-size: calc($large / 2);
+      color: $light;
+      &:hover {
+        @include transition;
+      }
+    }
+  }
 }

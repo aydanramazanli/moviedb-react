@@ -1,63 +1,46 @@
+//colors
 $pink: #ff55a5;
 $dark: #28282d;
 $light:rgba(255, 255, 255, 0.5);
 $darkNavbar:#2b2b31;
+$yellow:yellow;
+$bar : #2b2b31;
+$white:white;
 
-@mixin wallpaper{
- 
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  
-   
-}
+//size
+$sm: 10px;
+$ssm:15px;
+$llarge:30px;
+$large:36px;
+$medium:20px;
+$full-vh :100vh;
+$full:100%;
+$half:50%;
+$bold:500;
+$full-px:100px;
 
 
-@mixin flex-center{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
+//flex
+$flex:flex;
+$grid:grid;
+$col:column;
+$row:row;
+$none:none;
+$block:block;
+$start: flex-start;
+$center:center;
+$evenly:space-evenly;
 
-@mixin button{
-    border-radius: 4px;
-    background: $pink;
-    box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);
-    opacity: 0.85;
-    font-size: 14px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.6px;
-    border: none;
-    padding: 15px;
-    @include breakpoint-down(medium) {
-        padding:5px;
-        font-size: 14px;
-      }
-}
 
-@mixin hoverText{
-    color: $pink;
-    transition: all 0.4s ease;
-}
-// Breakpoints
-@media (min-width: 64em) {
-    // styles go here
-}
 
-// 640px, 1024px, 1400px
-$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
-// 639px, 1023px, 1399px
-$breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
-@mixin breakpoint-up($size) {
-    @media (min-width: map-get($breakpoints-up, $size)) {
-        @content;
-    }
-}
+//size
 
-@mixin breakpoint-down($size) {
-    @media (max-width: map-get($breakpoints-down, $size)) {
-        @content;
-    }
-}
+
+//margin and padding 
+$auto:auto;
+
+// cursor 
+$pointer:pointer;
+
+//radius
+$sm-radius:5%;

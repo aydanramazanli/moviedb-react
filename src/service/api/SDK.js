@@ -15,15 +15,19 @@ class SDK {
   }
 
   async getData (searchKey) {
-    const type = searchKey ? 'search' : 'discover';
-    const {
-      data: { results }
-    } = await this.ins.get(`/${type}/movie`, {
-      params: {
-        query: searchKey
-      }
-    });
-    return results;
+    try {
+      const type = searchKey ? 'search' : 'discover';
+      const {
+        data: { results }
+      } = await this.ins.get(`/${type}/movie`, {
+        params: {
+          query: searchKey
+        }
+      });
+      return results;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   async getPost (id) {

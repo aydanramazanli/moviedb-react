@@ -1,53 +1,46 @@
-@import '../../style/style';
+@import "../../style/style";
 .wishList {
-    background-image: url("../../images/background.jpg");
-    @include wallpaper;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    @include breakpoint-down(small) {
-      grid-template-columns: repeat(1,1fr);
-    }
-  h1{
-    color:white;
-    text-align: center;
-    
+  background-image: url("../../images/background.jpg");
+  @include wallpaper;
+  height: $full;
+  display: $grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include breakpoint-down(small) {
+    grid-template-columns: repeat(1, 1fr);
   }
-    .details {
-      width: 80%;
-      padding: 50px 0;
-      margin: auto;
-    
-      .detail-img img {
-        width: 100%;
-        border-radius: 5%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .footer{
-        padding:10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        h2{
-          color:$light;
-          font-size:20px;
-          @include breakpoint-down(small) {
-           font-size: 16px;
-          }
-          @include breakpoint-down(medium) {
-          
-            font-size: 14px;
-          }
+  h1 {
+    color: $white;
+    text-align: $center;
+  }
+  .details {
+    width: 80%;
+    padding: calc($full-px/2) 0;
+    margin: $auto;
+
+    .detail-img img {
+      border-radius: 5%;
+      @include image;
+    }
+    .footer {
+      padding: $sm;
+      @include flex-between;
+      h2 {
+        color: $light;
+        font-size: $medium;
+        @include breakpoint-down(small) {
+          font-size: $ssm;
         }
-        button{
-          @include button;
-          @include breakpoint-down(small) {
-            padding:5px;
-            font-size: 14px;
-          }
-         
+        @include breakpoint-down(medium) {
+          font-size: $ssm;
+        }
+      }
+      button {
+        @include button;
+        @include breakpoint-down(small) {
+          padding:calc($sm/2);
+          font-size: $ssm;
         }
       }
     }
   }
+}
