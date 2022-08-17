@@ -1,6 +1,9 @@
 import './_search.scss';
+import { GlobalContext } from '../../service/context/GlobalState';
+import { useContext } from 'react';
 
-const Search = ({ searchMovie, setSearchKey }) => {
+const Search = ({ searchMovie }) => {
+  const { setSearchKey } = useContext(GlobalContext);
   return (
     <>
       <form className="search" onSubmit={searchMovie}>
@@ -9,9 +12,6 @@ const Search = ({ searchMovie, setSearchKey }) => {
           placeholder="I'm looking for..."
           onChange={(e) => setSearchKey(e.target.value)}
         />
-        <button type="submit">
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
       </form>
     </>
   );

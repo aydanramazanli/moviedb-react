@@ -1,13 +1,14 @@
 @import "../../style/style";
 .movie {
+  @include flex-col;
+  align-items: $center;
   .movie-img {
     cursor: $pointer;
-    width: calc(($full-px * 2) + ($full-px/2));
-    height: calc($full-px + ($full-px/2));
+    // width: calc(($full-px * 2) + ($full-px/2));
+    height: calc($full-px*2);
     @include breakpoint-down(small) {
       width: 90%;
     }
-
     &:hover {
       opacity: 0.7;
       transition: all 0.4s ease;

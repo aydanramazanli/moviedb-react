@@ -2,7 +2,7 @@
 .movies {
 @include flex-col;
   margin: calc($full-px/2) $auto;
-  width: 80%;
+  width: 90%;
   @include breakpoint-down(small) {
     width: 90%;
   }
@@ -12,12 +12,13 @@
     line-height: calc($full-px/2);
     color: $light;
     margin-bottom: $sm;
+    padding: 0 $ssm;
   }
   .list {
     display: $grid;
     width: $full;
-    grid-template-columns: repeat(4, 1fr);
-    gap: $medium;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $sm;
     @include breakpoint-down(small) {
       grid-template-columns: repeat(2, 1fr);
     }
