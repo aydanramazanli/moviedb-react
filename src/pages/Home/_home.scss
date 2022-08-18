@@ -2,10 +2,11 @@
 
 .main{
   @include wallpaper;
+  min-height: 100vh;
   background-image:url('../../images/background.jpg');
-  padding: calc($medium/2) 0;
+  //padding: calc($medium/2) 0;
   @include breakpoint-up(medium){padding:$medium 0}
   @include breakpoint-down(small) {
-    padding:$medium;
+  //  padding:$medium;
   }
 }
