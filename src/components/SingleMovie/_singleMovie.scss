@@ -1,47 +1,60 @@
 @import "../../style/style";
 .movie {
+  position: relative;
   @include flex-col;
   align-items: $center;
   .movie-img {
     cursor: $pointer;
     // width: calc(($full-px * 2) + ($full-px/2));
-    height: calc($full-px*2);
+    height: calc($full-px * 2);
     @include breakpoint-down(small) {
       width: 90%;
     }
     &:hover {
-      opacity: 0.7;
+      opacity: 0.3;
       transition: all 0.4s ease;
     }
   }
-  .movie-footer {
-    @include flex-between;
+}
+.movie-card {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  h2 {
+    text-align: $center;
+    cursor: $pointer;
+    color: $light;
+    font-size: $medium;
+    padding: 0 calc($sm/2);
+    @include breakpoint-down(small) {
+      font-size: $ssm;
+    }
+    @include breakpoint-down(medium) {
+      font-size: $sm;
+    }
+    &:hover {
+      @include transition;
+    }
+  }
+  .info {
+    @include flex-center;
     margin: $sm 0;
     @include breakpoint-down(medium) {
-      justify-content: $evenly;
+      justify-content: $center;
     }
     @include breakpoint-down(small) {
       margin: calc($sm/2);
     }
-
-    h2 {
-      cursor: $pointer;
+    span {
       color: $light;
       font-size: $medium;
-      padding: 0 calc($sm/2);
-      @include breakpoint-down(small) {
-        font-size: $ssm;
-      }
-      @include breakpoint-down(medium) {
-        font-size: $sm;
-      }
-      &:hover {
-        @include transition;
-      }
     }
+
     i {
       cursor: $pointer;
-      font-size: calc($large / 2);
+      font-size: $medium;
       color: $light;
       &:hover {
         @include transition;

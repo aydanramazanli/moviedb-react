@@ -49,11 +49,16 @@
         @include breakpoint-down(small) {
           letter-spacing: 1px;
         }
+       
       }
-      span {
-        color: $light;
-        i {
-          color: $yellow;
+      .footer{
+        @include flex-between;
+        background: transparent;
+        span {
+          color: $light;
+          i {
+            color: $yellow;
+          }
         }
       }
     }

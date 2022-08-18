@@ -43,6 +43,7 @@
 }
 
 @mixin button {
+  cursor: $pointer;
   border-radius: 4px;
   background: $pink;
   box-shadow: 0 0 20px 0 rgb(255 88 96 / 50%);

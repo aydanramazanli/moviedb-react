@@ -14,6 +14,12 @@
     margin-bottom: $sm;
   }
   ul>li{
-    margin:0 5px;
+    margin:0 7px;
   }
+  .react-multiple-carousel__arrow--left {
+    left: calc(0% + 1px);
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(0% + 1px);
+}
 }
