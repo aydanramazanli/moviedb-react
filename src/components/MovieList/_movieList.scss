@@ -8,22 +8,12 @@
   }
 
   h1 {
-    font-size: $large;
+    font-size: 25px;
     line-height: calc($full-px/2);
-    color: $light;
+    color: $white;
     margin-bottom: $sm;
-    padding: 0 $ssm;
   }
-  .list {
-    display: $grid;
-    width: $full;
-    grid-template-columns: repeat(5, 1fr);
-    gap: $sm;
-    @include breakpoint-down(small) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include breakpoint-down(medium) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  ul>li{
+    margin:0 5px;
   }
 }

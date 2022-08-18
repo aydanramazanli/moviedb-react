@@ -19,17 +19,17 @@ export const GlobalProvider = (props) => {
     localStorage.setItem('wishlist', JSON.stringify(state.wishList));
   });
 
-  const data = async () => {
+  const searchMovies = async () => {
     const res = await getData(searchKey);
     setMovieData(res);
   };
   const searchMovie = (e) => {
     e.preventDefault();
-    data(searchKey);
+    searchMovies(searchKey);
   };
 
   useEffect(() => {
-    data();
+    searchMovies();
   }, []);
 
   // actions
@@ -43,7 +43,7 @@ export const GlobalProvider = (props) => {
 
   return (
     <GlobalContext.Provider
-      value={{ wishList: state.wishList, addMovieList, removeMovielist, data, movieData, setSearchKey, searchKey, searchMovie }}
+      value={{ wishList: state.wishList, addMovieList, removeMovielist, searchMovies, movieData, setSearchKey, searchKey, searchMovie }}
     >
       {props.children}
     </GlobalContext.Provider>

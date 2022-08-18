@@ -14,7 +14,7 @@ const movieRequests = {
   getDocumentariesMovies: `${baseURL}/discover/movie?api_key=${apiKey}&language=en-US&with_genres=99`
 };
 
-export const getMovies = async () => {
+export const getAllMovies = async () => {
   const [
     getTrending,
     getDiscover,

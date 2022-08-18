@@ -6,9 +6,9 @@ import { GlobalContext } from '../../service/context/GlobalState';
 import Search from '../Search/Search';
 
 export default function Navbar () {
-  const { data, setSearchKey, searchMovie } = useContext(GlobalContext);
+  const { searchMovies, setSearchKey, searchMovie } = useContext(GlobalContext);
   useEffect(() => {
-    data();
+    searchMovies();
   }, []);
   const location = useLocation();
   const [isOpen, setIOpen] = useState();
