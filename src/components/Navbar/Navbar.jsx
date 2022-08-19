@@ -1,15 +1,9 @@
-import { useState, useEffect, useCallback, useContext } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import logo from '../../images/logo.svg';
 import './_navbar.scss';
 import { Link, useLocation } from 'react-router-dom';
-import { GlobalContext } from '../../service/context/GlobalState';
-import Search from '../Search/Search';
 
 export default function Navbar () {
-  const { searchMovies, setSearchKey, searchMovie } = useContext(GlobalContext);
-  useEffect(() => {
-    searchMovies();
-  }, []);
   const location = useLocation();
   const [isOpen, setIOpen] = useState();
   const [userData, setUserData] = useState();
@@ -46,7 +40,6 @@ export default function Navbar () {
             </ul>
           </nav>
           <div className="navbar__auth">
-          <Search searchMovie={searchMovie} setSearchKey={setSearchKey} />
             <button>
               <Link to="/login"> Login</Link>
             </button>
@@ -69,7 +62,6 @@ export default function Navbar () {
             </ul>
           </nav>
           <div className="navbar__auth">
-              <Search searchMovie={searchMovie} setSearchKey={setSearchKey} />
             <button onClick={remove}>
               <Link to="/login">Logout</Link>
             </button>

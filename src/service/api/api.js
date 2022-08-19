@@ -60,15 +60,13 @@ export const getPost = async (id, mediaType) => {
   }
 };
 
-export const getData = async (searchKey) => {
+export const getData = async (query, { abortSignal, page = 1 }) => {
   try {
-    const {
-      data: { results }
-    } = await axios.get(
-      `${baseURL}/search/multi?api_key=${apiKey}&page=1&query=${searchKey}`
+    const searchReq = await fetch(
+      `${baseURL}/search/multi?api_key=${apiKey}&page=${page}&query=${query}`, { signal: abortSignal }
     );
-
-    return results;
+    const data = await searchReq.json();
+    return data;
   } catch (e) {
     console.log(e);
   }

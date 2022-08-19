@@ -1,7 +1,8 @@
 @import "../../style/style";
 .movies {
 @include flex-col;
-  margin: calc($full-px/2) $auto;
+margin: 50px auto ;
+margin-bottom: 0;
   width: 90%;
   @include breakpoint-down(small) {
     width: 90%;
@@ -11,7 +12,8 @@
     font-size: 25px;
     line-height: calc($full-px/2);
     color: $white;
-    margin-bottom: $sm;
+    margin-bottom: $medium;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.507);
   }
   ul>li{
     margin:0 7px;

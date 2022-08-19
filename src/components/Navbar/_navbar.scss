@@ -1,8 +1,8 @@
 @import "../../style/style";
 
 .navbar {
-  @include flex-around;
-  padding: $medium 0;
+  @include flex-between;
+  padding: $medium 60px;
 
   background: $darkNavbar;
   @include breakpoint-down(small) {
@@ -54,7 +54,7 @@
       @include flex-col;
       justify-content: $start;
       align-items: $start;
-      position: fixed;
+      position: absolute;
       top: 70px;
       right: 0;
       bottom: 0;

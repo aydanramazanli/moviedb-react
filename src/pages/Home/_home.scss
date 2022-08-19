@@ -1,12 +1,17 @@
-@import '../../style/style';
+@import "../../style/style";
 
-.main{
+.main {
   @include wallpaper;
   min-height: 100vh;
-  background-image:url('../../images/background.jpg');
-  //padding: calc($medium/2) 0;
-  @include breakpoint-up(medium){padding:$medium 0}
+  padding-bottom: 40px;
+  background-image: url("../../images/background.jpg");
+  @include breakpoint-up(medium) {
+  }
   @include breakpoint-down(small) {
-  //  padding:$medium;
+    padding-bottom: 20px;
+  }
+  .searchingDatas {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
   }
 }

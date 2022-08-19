@@ -38,6 +38,7 @@ export default function MovieList ({ movieData, title, movies }) {
           dotListClass="custom-dot-list-style"
           itemClass="carousel-item-padding-40-px"
         >
+
           {movies &&
             movies.results.map((movie) => {
               return <SingleMovie key={movie.id} movie={movie} />;

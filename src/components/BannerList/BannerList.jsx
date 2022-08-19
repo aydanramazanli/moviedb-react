@@ -4,7 +4,6 @@ import './_bannerList.scss';
 import { Link } from 'react-router-dom';
 
 export default function SimpleSlider ({ movies }) {
-  console.log(movies);
   const [movieInfo, setMovieInfo] = useState();
   const baseUrl = 'https://image.tmdb.org/t/p/original/';
 

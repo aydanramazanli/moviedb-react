@@ -55,6 +55,7 @@
   letter-spacing: 0.6px;
   border: none;
   padding: $sm;
+
   @include breakpoint-down(medium) {
     padding: 5px;
     font-size: $sm;
