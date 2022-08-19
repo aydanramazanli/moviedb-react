@@ -23,7 +23,8 @@ export default function Navbar () {
 
   return (
     <div className="navbar">
-      <div className="navbar__logo">
+      <div className="navbar-content">
+      <div className="logo">
         <Link to="/">
           {' '}
           <img src={logo} alt="logo" />
@@ -32,14 +33,14 @@ export default function Navbar () {
       {userData === null
         ? (
         <>
-          <nav className="navbar__navbar">
+          <nav className="nav">
             <ul>
               <li className="nav-item">
                 <Link to="/">Home</Link>
               </li>
             </ul>
           </nav>
-          <div className="navbar__auth">
+          <div className="auth">
             <button>
               <Link to="/login"> Login</Link>
             </button>
@@ -48,7 +49,7 @@ export default function Navbar () {
           )
         : (
         <>
-          <nav className="navbar__navbar">
+          <nav className="nav">
             <ul>
               <li className="nav-item">
                 <Link to="/">Home</Link>
@@ -61,15 +62,14 @@ export default function Navbar () {
               </li>
             </ul>
           </nav>
-          <div className="navbar__auth">
+          <div className="auth">
             <button onClick={remove}>
               <Link to="/login">Logout</Link>
             </button>
           </div>
         </>
           )}
-
-      <div className="mobile-navbar">
+             <div className="mobile-navbar">
         <i className="fa-solid fa-bars" onClick={visible}></i>
         {isOpen
           ? (
@@ -107,6 +107,8 @@ export default function Navbar () {
             )
           : null}
       </div>
+      </div>
+
     </div>
   );
 }

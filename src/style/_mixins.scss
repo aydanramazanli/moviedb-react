@@ -66,6 +66,37 @@
   color: $pink;
   transition: all 0.4s ease;
 }
+@mixin card{
+  h2 {
+    text-align: $center;
+    cursor: $pointer;
+    color: $light;
+    font-size: $medium;
+    padding: 0 calc($sm/2);
+    @include breakpoint-down(small) {
+      font-size: $ssm;
+    }
+    @include breakpoint-down(medium) {
+      font-size: $sm;
+    }
+    &:hover {
+      @include transition;
+    }
+  }
+  span {
+    color: $light;
+    font-size: $medium;
+  }
+
+  i {
+    cursor: $pointer;
+    font-size: $medium;
+    color: $light;
+    &:hover {
+      @include transition;
+    }
+  }
+}
 
 // 640px, 1024px, 1400px
 $breakpoints-up: (

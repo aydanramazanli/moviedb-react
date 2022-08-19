@@ -1,7 +1,7 @@
 @import "../../style/style";
 
 .search {
-  width: 80%;
+  width: 90%;
   display: $flex;
   margin: $auto;
   align-items: $center;
@@ -11,13 +11,15 @@
   }
   input {
     width: $full;
-    background-color: $white;
+    background-color: transparent;
     border-radius: 2%;
-    outline: $none;
+    outline: $white;
     font-size: $ssm;
-    border: $none;
+    border: 1px solid rgba(255, 192, 203, 0.767);
     padding: $sm $medium;
-    color: $dark;
+    color: $white;
+
+
     @include breakpoint-down(small) {
       padding: $sm $medium;
     }

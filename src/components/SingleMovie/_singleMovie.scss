@@ -5,7 +5,6 @@
   align-items: $center;
   .movie-img {
     cursor: $pointer;
-    // width: calc(($full-px * 2) + ($full-px/2));
     height: calc($full-px * 2);
     @include breakpoint-down(small) {
       width: 90%;
@@ -22,22 +21,7 @@
   bottom: 0;
   left: 0;
   height: 50%;
-  h2 {
-    text-align: $center;
-    cursor: $pointer;
-    color: $light;
-    font-size: $medium;
-    padding: 0 calc($sm/2);
-    @include breakpoint-down(small) {
-      font-size: $ssm;
-    }
-    @include breakpoint-down(medium) {
-      font-size: $sm;
-    }
-    &:hover {
-      @include transition;
-    }
-  }
+  @include card;
   .info {
     @include flex-center;
     margin: $sm 0;
@@ -47,18 +31,6 @@
     @include breakpoint-down(small) {
       margin: calc($sm/2);
     }
-    span {
-      color: $light;
-      font-size: $medium;
-    }
-
-    i {
-      cursor: $pointer;
-      font-size: $medium;
-      color: $light;
-      &:hover {
-        @include transition;
-      }
-    }
+   
   }
 }
