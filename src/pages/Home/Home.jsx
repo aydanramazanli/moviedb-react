@@ -4,6 +4,7 @@ import BannerList from '../../components/BannerList/BannerList';
 import { getAllMovies } from '../../service/api/api';
 import { GlobalContext } from '../../service/context/GlobalState';
 import Search from '../../components/Search/Search';
+import SearchedMovies from '../../components/SearchedMovies/SearchedMovies';
 import './_home.scss';
 
 export default function Home () {
@@ -54,18 +55,12 @@ export default function Home () {
 
       {searchKey !== '' && movieData !== undefined && movieData.length > 0
         ? (
-        <section className="w-full carousel" id="row">
-          <div className="mt-[70px]">
-            <div className="mb-5 border-b border-solid border-[#444] mx-2 pb-5 text-left">
-              <h2 className="text-2xl font-bold text-white">Search Result</h2>
-            </div>
-            <div className="relative grid lg:grid-cols-5">
+            <div className="searchedMovies">
               {movieData.map((sd) => {
-                return <h1 key={sd.id}>{sd.title}</h1>;
+                return <SearchedMovies key={sd.id} movie={sd}/>;
               })}
             </div>
-          </div>
-        </section>
+
           )
         : null}
     </div>
