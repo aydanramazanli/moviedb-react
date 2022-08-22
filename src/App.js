@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './style/_style.scss';
-import Register from './pages/Registration/Register/Register.jsx';
+import Register from './pages/Registration/Register/Register';
 import Login from './pages/Registration/Login/Login';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
