@@ -1,0 +1,97 @@
+@import "../../../style/style";
+.signup-container {
+  @include wallpaper;
+  background-image: url("../../../images/background.jpg");
+  height: $full-vh;
+  @include flex-center;
+  flex-direction: $col;
+  .signup-content {
+  @include flex-col;
+    background-color: $dark;
+    box-shadow: 0 5px 25px 0 rgb(0 0 0 / 30%);
+    border-top: 4px solid $pink;
+    border-top-right-radius:$sm-radius;
+    border-top-left-radius: $sm-radius;
+    padding: 40px;
+    @include breakpoint-down(small) {
+      padding: calc($medium *2) $medium;
+      width: 80%;
+    }
+    @include breakpoint-up(medium) {
+      padding:  $llarge $medium;
+      width: calc($full/2);
+    }
+    @include breakpoint-up(large) {
+      padding:  $llarge $medium;
+      width: calc($full/4);
+    }
+    h1 {
+      text-align: $center;
+      color: $white;
+      margin-bottom: $medium;
+      font-size: calc($ssm *2 );
+      @include breakpoint-down(small) {
+        font-size: $medium;
+      }
+    }
+    form {
+     @include flex-col;
+      h2{color:$white;}
+      .form-input {
+        background-color: #2b2b31;
+        border: 1px solid transparent;
+        height: calc($full-px/2);
+        outline: $none;
+        color: $white;
+        font-size: $ssm;
+        border-radius: 4px;
+        padding: 0 $medium;
+        margin: $sm 0;
+
+        @include breakpoint-down(small) {
+          font-size: $sm;
+          padding: 0 $sm;
+          margin: $ssm 0;
+        }
+        @include breakpoint-up(medium) {
+          font-size: $ssm;
+          padding: 0 $ssm;
+          margin: $ssm 0;
+        }
+        &:hover {
+          transition: all 0.5s ease;
+          border: 1px solid $pink;
+        }
+      }
+      .form-button {
+        @include button;
+        width:$full;
+        margin-top: $ssm;
+      }
+      .update {
+        background: $light;
+        border: $none;
+        outline: $none;
+        color: $white;
+        width: 30%;
+        padding:$sm;
+        &:hover{
+          background:darkgray;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+    h5 {
+      font-size: $ssm;
+      color: $light;
+      text-align: $center;
+      margin-top: $sm;
+      @include breakpoint-up(medium) {
+        margin-top: $medium;
+      }
+      @include breakpoint-down(small) {
+        margin-top: $medium;
+      }
+    }
+  }
+}
