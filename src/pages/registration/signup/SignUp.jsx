@@ -1,6 +1,6 @@
 
 import { useRef } from 'react';
-import './signup.scss';
+import './_signup.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function SignUp () {
