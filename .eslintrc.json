@@ -3,6 +3,11 @@
         "browser": true,
         "es2021": true
     },
+    "settings": {
+        "react": {
+          "version": "999.9.9"
+        }
+      },
     "extends": [
         "plugin:react/recommended",
         "standard"
