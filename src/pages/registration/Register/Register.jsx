@@ -1,9 +1,9 @@
 
 import { useRef } from 'react';
-import './_signup.scss';
+import './_register.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function SignUp () {
+export default function Register () {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);

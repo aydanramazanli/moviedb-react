@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './style/_style.scss';
-import SignUp from './pages/Registration/Signup/SignUp';
+import Register from './pages/Registration/Register/Register';
 import Login from './pages/Registration/Login/Login';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
@@ -19,7 +19,7 @@ function App () {
         <Route path="/account" element={<Account />} />
         <Route path="/detail/:id" element={<MovieDetail />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<SignUp />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" exact element={<Home />} />
       </Routes>
       <Footer />

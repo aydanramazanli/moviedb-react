@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import '../../pages/Registration/Signup/_signup.scss';
+import '../../pages/Registration/Register/_register.scss';
 import { Link } from 'react-router-dom';
 
 export default function Account () {
