@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import './style/_style.scss';
-import SignUp from './pages/registration/Signup/SignUp';
-import Login from './pages/registration/login/Login';
+import SignUp from './pages/Registration/Signup/SignUp';
+import Login from './pages/Registration/Login/Login';
 import Home from './pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import WishList from './components/WishList/WishList';
