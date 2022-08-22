@@ -5,7 +5,7 @@
   display: $flex;
   margin: $auto;
   align-items: $center;
-  padding:20px 0;
+  padding:$medium 0;
   @include breakpoint-down(small) {
     width: 90%;
   }

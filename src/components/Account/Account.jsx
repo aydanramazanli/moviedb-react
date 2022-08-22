@@ -51,7 +51,7 @@ export default function Account () {
 				<form>
 					<h2>
 
-            Last Datas: {local.name}, {local.email}, {local.password}
+            Your Data: {local.name}, {local.email}, {local.password}
 					</h2>
 
 					{inputs.map((input, i) => (

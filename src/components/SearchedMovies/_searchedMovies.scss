@@ -3,7 +3,7 @@
     color: transparent;
     display: inline-block;
     height: 75%;
-    width: 100%;
+    width: $full;
   a {
    
 
@@ -14,6 +14,6 @@
   .info {
     @include flex-between;
    @include card;
-   margin:10px 0;
+   margin:$sm 0;
   }
 }

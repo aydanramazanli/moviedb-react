@@ -1,7 +1,7 @@
 @import "../../style/style";
 .movies {
 @include flex-col;
-margin: 50px auto ;
+margin: calc($sm * 5) auto ;
 margin-bottom: 0;
   width: 90%;
   @include breakpoint-down(small) {

@@ -57,7 +57,7 @@
         @include flex-col;
         justify-content: $start;
         align-items: $start;
-        position: absolute;
+        position: $absolute;
         top: 70px;
         right: 0;
         bottom: 0;

@@ -2,19 +2,22 @@
 
 .main {
   @include wallpaper;
-  min-height: 100vh;
-  padding-bottom: 40px;
+  min-height: $full-vh;
+  padding-bottom: calc($medium *2);
   background-image: url("../../images/background.jpg");
   @include breakpoint-up(medium) {
   }
   @include breakpoint-down(small) {
-    padding-bottom: 20px;
+    padding-bottom: $medium;
   }
   .searchedMovies {
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   gap:10px;
+   gap:$sm;
    width:90%;
    margin:auto;
+   @include breakpoint-down(small) {
+    grid-template-columns: repeat(1, 1fr);
+  }
   }
 }
