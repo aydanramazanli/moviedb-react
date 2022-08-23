@@ -82,7 +82,7 @@ export default function Navbar () {
                     <Link to="/">Home</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/">Login</Link>
+                    <Link to="/login">Login</Link>
                   </li>
                 </>
                   )
